@@ -39,11 +39,20 @@ function getData() {
       document.getElementById("output").innerHTML += row;
     });
   });
+
+}
+
+getData();
+
+function redirectToRoomName(name)
+{
+  console.log(name);
+  localStorage.setItem("room_name", name);
+    window.location = "school_page.html";
 }
 
 function logOut() {
-  localStorage.removeItem("user_name");
-  localStorage.removeItem("room_name");
-  window.location = "index.html";
- 
+localStorage.removeItem("user_name");
+localStorage.removeItem("room_name");
+    window.location = "index.html";
 }
